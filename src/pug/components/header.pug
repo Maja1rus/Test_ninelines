@@ -1,0 +1,12 @@
+header.header: .container
+	.header__wrapper
+		a.header__logo(href='/')
+			span.sprite-logo
+		nav.header__nav
+			ul.header__nav__wrapper
+				each object, key in data.header.menu
+					li: a.header__nav__link.js-to-anchor(
+						href=object.url
+						data-link=key
+					)
+						!= object.name

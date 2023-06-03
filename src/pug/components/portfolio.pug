@@ -1,0 +1,65 @@
+section.portfolio: .container
+    .portfolio__wrapper
+        .portfolio__experience
+            h2.h2.portfolio__title
+                | Опыт работы
+
+            .portfolio__experience__wrapper
+                each object, key in data.portfolio.experience
+                    .portfolio__experience__item
+                        span.portfolio__experience__time
+                            != object.time 
+
+                        .portfolio__experience__title
+                            != object.title 
+                            .portfolio__experience__icons
+                                each icon in object.icons
+                                    .portfolio__experience__icon(
+                                        class=`portfolio__experience__icon--${icon}`
+                                    )
+                        
+                        .portfolio__experience__work
+                            if object.avatar
+                                +lazyPicture({
+                                    src: `${baseDir}images/${object.avatar}.jpg`,
+                                    alt: `${object.name}`,
+                                }).portfolio__experience__avatar
+                            if object.name 
+                                span.portfolio__experience__work__name 
+                                    != object.name 
+                            span.portfolio__experience__work__description
+                                != object.description
+
+                        .portfolio__experience__text
+                            != object.text
+
+                        if object.links
+                            ul.portfolio__experience__links
+                                each link in object.links
+                                    li: a.portfolio__experience__link(
+                                        href=link.url
+                                        target='_blank'
+                                    )
+                                        != link.name
+        
+        .portfolio__education
+            h2.h2.portfolio__title
+                | Образование
+
+            .portfolio__education__wrapper
+                each object, key in data.portfolio.education
+                    .portfolio__education__item()
+                        .portfolio__education__icons
+                            each icon in object.icons
+                                - let iconSize = icon.size ? `portfolio__education__icon--${icon.size}` : ''
+                                .portfolio__education__icon(
+                                    class = `portfolio__education__icon--${icon.color} ${iconSize}`
+                                )
+
+                        .portfolio__education__title
+                            != object.title 
+
+                        .portfolio__education__text
+                            each text in object.texts
+                                p 
+                                    != text

@@ -1,0 +1,42 @@
+.first-screen {
+	padding-bottom: 200px;
+}
+
+.first-screen__wrapper {
+	display: flex;
+	column-gap: 310px;
+}
+
+.first-screen__main {}
+
+.first-screen__title {
+	padding-bottom: 30px;
+}
+
+.first-screen_text {
+	@include font-regular;
+	max-width: 560px;
+	line-height: 140%;
+
+}
+
+.first-screen__info {
+	@include font-regular;
+	display: flex;
+	flex-direction: column;
+	row-gap: 10px;
+	line-height: 140%;
+}
+
+.first-screen__info__link {
+
+	&:hover {
+		color: $color-link;
+	}
+}
+
+.first-screen__info__text {}
+
+.first-screen__socials {
+	padding-top: 5px;
+}

@@ -1,0 +1,31 @@
+.skills {
+    padding-top: 198px;
+
+    .h2 {
+        padding-bottom: 30px;
+    }
+}
+
+.skills__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+}
+
+.skills__item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 6px;
+    row-gap: 7px;
+    max-width: 270px;
+    width: 100%;
+}
+
+.skills__title {
+    @include font-bold;
+}
+
+.skills__text {
+    @include font-regular;
+    line-height: 140%;
+}

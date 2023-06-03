@@ -1,0 +1,28 @@
+section.first-screen: .container
+    .first-screen__wrapper
+        .first-screen__main
+            h1.h1.first-screen__title
+                | Денис Налимов,
+                br
+                | Frontend разработчик
+            .first-screen_text
+                | Я думаю, что смогу быть полезным сотрудником. Мне важно сделать качественно свою работу, ответственно подхожу к решению задач,  стремлюсь к развитию и новым знаниям в области программирования. Также стараюсь следить за известными разработчиками и перенимать их опыт. Мне нравится решать сложные и нестандартные задачи, так как благодаря таким задачам я становлюсь опытнее.
+        
+        .first-screen__info
+            a.first-screen__info__link(href="mailto:nalimoff.deniss@gmail.com")
+                | nalimoff.deniss@gmail.com
+            a.first-screen__info__link(href="tel:+79655040332")
+                | +7 (965)504-03-32
+            p.first-screen__info__text 
+                | г. Санкт-Петербург
+            ul.first-screen__socials.socials
+                each object, key in data.first_screen.socials
+                    li: a.social(
+                        class=`social_${object.class}`
+						href=object.url
+						data-link=key
+                        target='_blank'
+					)
+                        +svg(`${object.class}`) 
+
+

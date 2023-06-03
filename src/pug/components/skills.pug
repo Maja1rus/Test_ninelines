@@ -1,0 +1,10 @@
+section.skills: .container
+    h2.h2 
+        | Навыки
+    .skills__wrapper
+        each object, key in data.skills.list
+            .skills__item()
+                span.skills__title
+                    != object.title
+                span.skills__text
+                    != object.text
