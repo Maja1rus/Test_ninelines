@@ -1,6 +1,7 @@
 .first-screen {
 	position: relative;
 	padding-bottom: 40px;
+	padding-top: 30px;
 
 	&::before {
 		content: '';
@@ -15,6 +16,7 @@
 	}
 
 	@include desktop {
+		padding-top: 41px;
 		padding-bottom: 200px;
 
 		&::before {

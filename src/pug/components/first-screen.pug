@@ -17,12 +17,13 @@ section.first-screen#about: .container
                 | г. Санкт-Петербург
             ul.first-screen__socials.socials
                 each object, key in data.first_screen.socials
-                    li: a.social(
-                        class=`social_${object.class}`
-						href=object.url
-						data-link=key
-                        target='_blank'
-					)
-                        +svg(`${object.class}`) 
+                    li: button.btn.social(
+                        type="button",
+                        data-social=object.social,
+                        title=object.title,
+                        aria-label=object.title
+                        image=`${baseDir}images/${object.image}.jpg`
+                    ) 
+                        +svg(`${object.icon}`) 
 
 

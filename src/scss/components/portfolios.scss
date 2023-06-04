@@ -116,6 +116,12 @@
     padding-bottom: 8px;
 }
 
+.portfolio__experience__work__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 8px;
+}
+
 .portfolio__experience__avatar {
 
     img {

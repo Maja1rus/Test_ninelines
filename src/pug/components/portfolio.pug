@@ -24,11 +24,13 @@ section.portfolio#portfolio: .container
                                     src: `${baseDir}images/${object.avatar}.jpg`,
                                     alt: `${object.name}`,
                                 }).portfolio__experience__avatar
-                            if object.name 
-                                span.portfolio__experience__work__name 
-                                    != object.name 
-                            span.portfolio__experience__work__description
-                                != object.description
+
+                            .portfolio__experience__work__wrapper
+                                if object.name 
+                                    span.portfolio__experience__work__name 
+                                        != object.name 
+                                span.portfolio__experience__work__description
+                                    != object.description
 
                         .portfolio__experience__text
                             != object.text

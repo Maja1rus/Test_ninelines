@@ -1,5 +1,8 @@
 import helpers from '../helpers';
 
+/**
+* Логика прелоудера
+*/
 const init = () => {
     const preloader = document.querySelector('.preloader');
 
@@ -12,10 +15,8 @@ const init = () => {
             
             mediaFiles.forEach((file, index) => {
                 file.onload = () => {
+                    console.log(file);
                     i++
-                    
-                    console.log(percents);
-
                     if(i === mediaFiles.length) {
                         helpers.lockScroll(false, helpers.$header.find(preloader), '');
                         preloader.classList.add('preloader--hide')
@@ -25,7 +26,6 @@ const init = () => {
         })
     }
 }
-
 
 export default {
 	init

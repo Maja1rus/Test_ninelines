@@ -1,6 +1,8 @@
 .header {
-	padding-top: 20px;
-	padding-bottom: 30px;
+	position: sticky;
+	top: 0;
+	background-color: $color-white;
+	z-index: 2;
 	
 	&.is-menu-opened {
 		z-index: 2;
@@ -11,11 +13,6 @@
 			transform: translate(0);
 			opacity: 1;
 		}
-	}
-
-	@include desktop {
-		padding-top: 100px;
-		padding-bottom: 41px;
 	}
 }
 
@@ -148,6 +145,10 @@
 			transition: color 0.2s ease-in-out;
 		}
 
+		.is-active {		
+			color: $color-accent;
+		}
+
 		&:first-child {
 			position: relative;
 
@@ -182,14 +183,9 @@
 					height: 152px;
 					left: -22px;
 					top: -95px;
+					pointer-events: none;
 				}
 			}
-
-			&:active {
-				a {
-					color: #D2233C;
-				}
-			} 
 
 			&:hover {
 

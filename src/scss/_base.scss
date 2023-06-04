@@ -153,6 +153,12 @@ iframe {
 	min-height: 100vh; // fallback
 	// stylelint-disable-next-line
 	min-height: var(--vh);
+	height: 100%;
+	padding-top: 20px;
+
+	@include desktop {
+		padding-top: 100px;
+	}
 }
 
 .h1 {
