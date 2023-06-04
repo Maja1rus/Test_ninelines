@@ -9,10 +9,12 @@ import lazyLoading from './modules/lazyLoading';
 import scrollToAnchor from './modules/scrollToAnchor';
 import scrollToTop from './modules/scrollToTop';
 import animation from './modules/animation';
+import preloader from './modules/preloader';
 
 ieFix();
 vhFix();
 actualYear();
+preloader.init();
 scrollToAnchor.init();
 scrollToTop.init();
 animation.init();

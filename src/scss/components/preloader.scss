@@ -1,0 +1,20 @@
+.preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 12;
+    background-color: $color-white;
+    background-image: url("../images/preloader.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.preloader--hide {
+    display: none;
+}
+
+.preloader__image {
+    transform: translate(-95%, 155%);
+}

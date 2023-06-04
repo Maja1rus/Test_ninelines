@@ -4,7 +4,7 @@ function openMenu() {
 	return new Promise((resolve) => {
 		$('.js-burger').addClass('is-disabled').attr('disabled', true);
 
-		helpers.lockScroll(true, helpers.$header.find('.header__menu'), 'header');
+		helpers.lockScroll(true, helpers.$header.find('.header__nav'), 'header');
 
 		helpers.$header.addClass('is-menu-opened');
 		$('.header__menu').removeClass('is-hidden');
@@ -27,7 +27,7 @@ function closeMenu() {
 	return new Promise((resolve) => {
 		$('.js-burger').addClass('is-disabled').attr('disabled', true);
 
-		helpers.lockScroll(false, helpers.$header.find('.header__menu'), 'header');
+		helpers.lockScroll(false, helpers.$header.find('.header__nav'), 'header');
 		helpers.$body.css('padding-right', '');
 		helpers.$header.css('right', '');
 
