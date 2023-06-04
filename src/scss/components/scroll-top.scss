@@ -1,0 +1,47 @@
+.scroll-to-top {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid $color-black;
+    border-radius: 50%;
+    font-size: 12px;
+    line-height: 100%;
+    background-color: $color-white;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.2s ease-in-out;
+    z-index: 1;
+
+    &.is-arrow {
+        color: transparent;
+        background-image: url("../images/arrow.svg");
+        background-size: 10px 12px;
+        transform: rotate(360deg);
+    }
+
+    @include desktop {
+        font-size: 14px;
+        width: 48px;
+        height: 48px;
+        right: 25px;
+        bottom: 90px;
+
+        &.is-arrow {
+            background-size: 18px 24px;
+        }
+    }
+}
+
+.scroll-to-top__wrap {
+    position: relative;
+    pointer-events: none;
+}
+
+.scroll-to-top__progress {
+    position: absolute;
+}

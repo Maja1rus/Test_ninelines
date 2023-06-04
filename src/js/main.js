@@ -7,11 +7,15 @@ import {actualYear} from './modules/actualYear';
 import header from './components/header';
 import lazyLoading from './modules/lazyLoading';
 import scrollToAnchor from './modules/scrollToAnchor';
+import scrollToTop from './modules/scrollToTop';
+import animation from './modules/animation';
 
 ieFix();
 vhFix();
 actualYear();
 scrollToAnchor.init();
+scrollToTop.init();
+animation.init();
 
 header.init();
 lazyLoading.init();

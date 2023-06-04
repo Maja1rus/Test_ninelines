@@ -140,7 +140,11 @@ iframe {
 	margin: 0 auto;
 	width: 100%;
 	max-width: calc(1140px + 60px);
-	padding: 0 30px;
+	padding: 0 20px;
+
+	@include desktop {
+		padding: 0 30px;
+	}
 }
 
 .site {
@@ -153,14 +157,23 @@ iframe {
 
 .h1 {
 	margin: 0;
-	font-size: 36px;
+	font-size: 28px;
 	line-height: 140%;
+
+	@include desktop {
+		font-size: 36px;
+	}
 }
 
 .h2 {
 	margin: 0;
-	font-size: 24px;
-	line-height: 29px;
+	font-size: 20px;
+	line-height: 24px;
+
+	@include desktop {
+		font-size: 24px;
+		line-height: 29px;
+	}
 }
 
 /* stylelint-disable */

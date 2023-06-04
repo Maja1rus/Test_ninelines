@@ -1,7 +1,21 @@
+.portfolio {
+
+    @include desktop {
+        position: relative;
+    }
+}
+
 .portfolio__wrapper {
     display: flex;
-    justify-content: space-between;
-    column-gap: 30px;
+    flex-direction: column;
+    row-gap: 40px;
+    column-gap: 40px;
+
+    @include desktop {
+        flex-direction: row;
+        justify-content: space-between;
+        column-gap: 310px;
+	}
 }
 
 .portfolio__experience {
@@ -15,7 +29,11 @@
 }
 
 .portfolio__title {
-    padding-bottom: 28px;
+    padding-bottom: 20px;
+
+    @include desktop {
+        padding-bottom: 28px;
+    }
 }
 
 
@@ -132,25 +150,68 @@
     border-bottom: 1px solid $color-link;
     transition: border-color 0.2s ease-in-out;
 
-    &:hover {
-        border-color: transparent;
+    @include desktop {
+
+        &:hover {
+            border-color: transparent;
+        }
+    }
+}
+
+.portfolio__image {
+    height: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+    top: -11px;
+
+    @include desktop {
+        position: absolute;
+        max-width: 100%;
+        right: 205px;
+    }
+}
+
+.portfolio__image__wrap {
+
+    @include desktop {
+        position: sticky;
+        top: 0;
     }
 }
 
 .portfolio__education {
-    max-width: 270px;
+    margin: 0 auto;
     width: 100%;
+    max-width: 500px;
 
     .portfolio__title {
-        padding-bottom: 38px;
-        text-align: center;
+        padding-bottom: 22px;
+    }
+
+    @include desktop {
+        max-width: 270px;
+        margin-right: 0;
+
+        .portfolio__title {
+            text-align: center;
+            padding-bottom: 38px;
+        }
     }
 }
 
 .portfolio__education__wrapper {
-    display: flex;
-    flex-direction: column;
-    row-gap: 34px;
+    display: grid;
+    align-items: start;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 23px;
+
+    @include desktop {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 34px;
+    }
 }
 
 .portfolio__education__item {
@@ -173,9 +234,13 @@
     display: flex;
     flex-direction: column;
     row-gap: 5px;
-    max-width: 150px;
+    max-width: 157px;
     text-align: center;
     line-height: 140%;
+
+    @include desktop {
+        max-width: 150px;
+    }
 }
 
 .portfolio__education__icons {

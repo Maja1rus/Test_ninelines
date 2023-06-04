@@ -1,9 +1,9 @@
-section.skills: .container
+section.skills#skills: .container
     h2.h2 
         | Навыки
     .skills__wrapper
         each object, key in data.skills.list
-            .skills__item()
+            .skills__item().animation__show-bottom.anim-items.anim-no-hide
                 span.skills__title
                     != object.title
                 span.skills__text

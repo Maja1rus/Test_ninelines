@@ -1,4 +1,4 @@
-section.portfolio: .container
+section.portfolio#portfolio: .container
     .portfolio__wrapper
         .portfolio__experience
             h2.h2.portfolio__title
@@ -6,7 +6,7 @@ section.portfolio: .container
 
             .portfolio__experience__wrapper
                 each object, key in data.portfolio.experience
-                    .portfolio__experience__item
+                    .portfolio__experience__item.animation__show-bottom.anim-items.anim-no-hide
                         span.portfolio__experience__time
                             != object.time 
 
@@ -42,13 +42,20 @@ section.portfolio: .container
                                     )
                                         != link.name
         
+        .portfolio__image.animation__show-bottom.anim-items.anim-no-hide
+            .portfolio__image__wrap
+                +lazyPicture({
+                    src: `${baseDir}images/portfolio-image.png`,
+                    alt: `Изображение`,
+                })
+
         .portfolio__education
             h2.h2.portfolio__title
                 | Образование
 
             .portfolio__education__wrapper
                 each object, key in data.portfolio.education
-                    .portfolio__education__item()
+                    .portfolio__education__item().animation__show-bottom.anim-items.anim-no-hide
                         .portfolio__education__icons
                             each icon in object.icons
                                 - let iconSize = icon.size ? `portfolio__education__icon--${icon.size}` : ''

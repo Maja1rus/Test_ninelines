@@ -1,7 +1,11 @@
-header.header: .container
+header.header#header: .container
 	.header__wrapper
 		a.header__logo(href='/')
 			span.sprite-logo
+		button.header__burger.btn.js-burger(type="button")
+			span
+			span
+			span
 		nav.header__nav
 			ul.header__nav__wrapper
 				each object, key in data.header.menu
@@ -10,3 +14,7 @@ header.header: .container
 						data-link=key
 					)
 						!= object.name
+			+lazyPicture({
+				src: `${baseDir}images/menu-images.jpg`,
+				alt: `Меню`,
+			}).header__nav__images

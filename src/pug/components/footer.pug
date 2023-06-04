@@ -2,4 +2,8 @@ footer.footer
 	+lazyPicture({
 		src: `${baseDir}images/footer-image.jpg`,
 		alt: 'Спасибо за внимание!',
-	}).footer__image
+	}, [
+		{
+			srcset: `${baseDir}images/footer-image.jpg`,
+		}
+	]).footer__image.animation__show-bottom.anim-items.anim-no-hide

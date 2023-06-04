@@ -1,0 +1,17 @@
+
+.animation__show-bottom {
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+
+    &.is-anim-active {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
+
+@keyframes ani {
+    0% {transform: translate(20px, 40px);}
+    100% {transform: translate(0, 0);}
+}
