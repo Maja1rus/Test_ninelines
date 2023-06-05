@@ -13,6 +13,15 @@ const init = () => {
             let i = 0;
     
             Array.from(mediaFiles).forEach((file) => {
+                if (file.classList.contains('preloader__image')) {
+                    preloader.classList.add('preloader--step-3');
+    
+                    setTimeout(() => {
+                        preloader.classList.add('is-hidden');
+                        html.classList.remove('is-lock-scroll')
+                    }, "500");
+                }
+
                 file.onload = () => {
                     i++;
                     let percents = ((i * 100) / mediaFiles.length).toFixed();
@@ -28,7 +37,6 @@ const init = () => {
                             preloader.classList.add('is-hidden');
                             html.classList.remove('is-lock-scroll')
                         }, "500");
-                       
                         percents = 100;
                     }
                 }

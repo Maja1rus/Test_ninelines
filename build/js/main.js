@@ -767,6 +767,13 @@ var init = function init() {
       var mediaFiles = document.querySelectorAll('img, video');
       var i = 0;
       Array.from(mediaFiles).forEach(function (file) {
+        if (file.classList.contains('preloader__image')) {
+          preloader.classList.add('preloader--step-3');
+          setTimeout(function () {
+            preloader.classList.add('is-hidden');
+            html.classList.remove('is-lock-scroll');
+          }, "500");
+        }
         file.onload = function () {
           i++;
           var percents = (i * 100 / mediaFiles.length).toFixed();
