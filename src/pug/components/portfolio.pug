@@ -39,10 +39,10 @@ section.portfolio#portfolio: .container
                             ul.portfolio__experience__links
                                 each link in object.links
                                     li: a.portfolio__experience__link(
-                                        href=link.url
-                                        target='_blank'
-                                    )
-                                        != link.name
+                                            href=link.url
+                                            target='_blank'
+                                        )
+                                            != link.name
         
         .portfolio__image.animation__show-bottom.anim-items.anim-no-hide
             .portfolio__image__wrap

@@ -1,8 +1,19 @@
 .header {
-	position: sticky;
-	top: 0;
 	background-color: $color-white;
 	z-index: 2;
+
+	&.fixed {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		animation-name: show-fixed;
+		animation-duration: 0.5s;
+	
+		.header__burger {
+			margin-top: auto;
+		}
+	}
 	
 	&.is-menu-opened {
 		z-index: 2;
@@ -14,6 +25,35 @@
 			opacity: 1;
 		}
 	}
+
+	@include desktop {
+
+		&.fixed { 
+			padding: 10px 0;
+
+			.header__wrapper {
+				align-items: center;
+			}
+			
+			.header__logo .sprite-logo {
+				width: 80px;
+				height: 80px;
+			}
+		}
+	}
+}
+
+
+@keyframes show-fixed {
+    0% {
+        opacity: 0;
+        top: -70px;
+    }
+
+    100% {
+        opacity: 1;
+        top: 0;
+    }
 }
 
 .header__wrapper {

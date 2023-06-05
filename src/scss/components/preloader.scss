@@ -6,15 +6,57 @@
     height: 100vh;
     z-index: 12;
     background-color: $color-white;
-    background-image: url("../images/preloader.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
+
+    &.preloader--step-2 {
+
+        .preloader__image {
+            transform: translate(0%, 50%);
+        }
+    }
+    
+    &.preloader--step-3 {
+
+        .preloader__image {
+            transform: translate(200%, -90%);
+        }
+    }
 }
 
-.preloader--hide {
-    display: none;
+
+
+.preloader__wrapper {
+    position: relative;
+    display: block;
+    height: 100%;
+    width: 100%;
 }
 
 .preloader__image {
-    transform: translate(-95%, 155%);
+    position: absolute;
+
+    transform: translate(-100%, 100%);
+    transition: all 1s ease-in-out;
+    // animation-name: preloader;
+    // animation-duration: 0.5s;
 }
+
+.preloader--step-1 {
+    transform: translate(-100%, 100%);
+}
+
+
+
+// @keyframes preloader {
+//     0% {
+//         transform: translate(-100%, 100%);
+//     }
+
+//     25% {
+//         transform: translate(0%, 50%);
+//     }
+
+
+//     100% {
+//         transform: translate(200%, -90%);
+//     }
+// }

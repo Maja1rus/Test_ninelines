@@ -36,7 +36,6 @@ function closeMenu() {
 		$('.header__nav').removeClass('is-active');
 
 		setTimeout(() => {
-			$('.header__nav').addClass('is-hidden');
 			$('.js-burger').removeClass('is-disabled').attr('disabled', false);
 
 			resolve();

@@ -5,11 +5,12 @@ const init = () => {
     const btn = document.querySelector('.js-sctoll-to-top');
     const text = btn.querySelector('span');
 
-    window.addEventListener('scroll', function (){ 
+    function buttonPercent () {
+
         let h = document.documentElement, 
-        b = document.body,
-        st = 'scrollTop',
-        sh = 'scrollHeight';
+            b = document.body,
+            st = 'scrollTop',
+            sh = 'scrollHeight';
     
         let percent = Math.round((h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight) * 100);
 
@@ -20,7 +21,13 @@ const init = () => {
         }
        
         text.innerHTML = `${percent}%`
-    })
+    } 
+
+    window.addEventListener('scroll', function (){ 
+        buttonPercent();
+    });
+
+    buttonPercent();
 }
 
 export default {
