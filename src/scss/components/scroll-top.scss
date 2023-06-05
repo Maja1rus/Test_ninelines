@@ -18,6 +18,7 @@
 
     &.is-arrow {
         color: transparent;
+        border-color: #D2233C;
         transform: rotate(360deg);
 
         .scroll-to-top__wrapper {
@@ -73,27 +74,4 @@
 
 .scroll-to-top__text {
 z-index: 2;
-}
-
-.scroll-to-top__circle {
-    --fg: #D2233C;
-    --bg: #fff;
-    --pgPercentage: var(--value);
-    position: absolute;
-    animation: growProgressBar 3s 1 forwards;
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: 
-        radial-gradient(closest-side, white 93%, transparent 0 99.9%, #282A33 0), 
-        conic-gradient(var(--fg) calc(var(--pgPercentage) * 1%), var(--bg) 0);
-
-    @include desktop {
-        width: 46px;
-        height: 46px;
- 
-    }
 }

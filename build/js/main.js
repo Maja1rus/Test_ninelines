@@ -853,7 +853,7 @@ __webpack_require__.r(__webpack_exports__);
 */
 var init = function init() {
   var btn = document.querySelector('.js-sctoll-to-top');
-  var circle = btn.querySelector('.scroll-to-top__circle');
+  // const circle = btn.querySelector('.scroll-to-top__circle');
   var text = btn.querySelector('.scroll-to-top__text');
   function buttonPercent() {
     var h = document.documentElement,
@@ -863,11 +863,12 @@ var init = function init() {
     var percent = Math.round((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight) * 100);
     if (percent >= 95) {
       btn.classList.add('is-arrow');
-      circle.setAttribute("style", "--value:100");
+      // circle.setAttribute("style", `--value:100`);
     } else {
       btn.classList.remove('is-arrow');
-      circle.setAttribute("style", "--value:".concat(percent));
+      // circle.setAttribute("style", `--value:${percent}`);
     }
+
     text.innerHTML = "".concat(percent, "%");
   }
   window.addEventListener('scroll', function () {

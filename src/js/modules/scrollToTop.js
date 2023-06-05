@@ -3,7 +3,7 @@
 */
 const init = () => {
     const btn = document.querySelector('.js-sctoll-to-top');
-    const circle = btn.querySelector('.scroll-to-top__circle');
+    // const circle = btn.querySelector('.scroll-to-top__circle');
     const text = btn.querySelector('.scroll-to-top__text');
 
     function buttonPercent () {
@@ -15,14 +15,12 @@ const init = () => {
     
         let percent = Math.round((h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight) * 100);
 
-        
-
         if (percent >= 95) {
             btn.classList.add('is-arrow');
-            circle.setAttribute("style", `--value:100`);
+            // circle.setAttribute("style", `--value:100`);
         } else {
             btn.classList.remove('is-arrow');
-            circle.setAttribute("style", `--value:${percent}`);
+            // circle.setAttribute("style", `--value:${percent}`);
         }
        
         text.innerHTML = `${percent}%`
