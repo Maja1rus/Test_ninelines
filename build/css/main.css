@@ -989,12 +989,14 @@ iframe {
     width: 25px;
     height: 25px; }
 
-.social svg {
-  -webkit-transition: fill 0.3s ease-in-out;
-  -o-transition: fill 0.3s ease-in-out;
-  transition: fill 0.3s ease-in-out; }
-  .social svg:hover {
-    fill: #7B49F2; }
+.social {
+  fill: #282A33; }
+  .social svg {
+    -webkit-transition: fill 0.3s ease-in-out;
+    -o-transition: fill 0.3s ease-in-out;
+    transition: fill 0.3s ease-in-out; }
+    .social svg:hover {
+      fill: #7B49F2; }
 
 .first-screen {
   position: relative;
@@ -1579,6 +1581,7 @@ iframe {
     z-index: 1; }
 
 .scroll-to-top__text {
+  color: #282A33;
   z-index: 2; }
 
 .animation__show-bottom {
