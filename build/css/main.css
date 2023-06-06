@@ -990,12 +990,14 @@ iframe {
     height: 25px; }
 
 .social svg {
-  fill: #282A33;
-  -webkit-transition: fill 0.3s ease-in-out;
-  -o-transition: fill 0.3s ease-in-out;
-  transition: fill 0.3s ease-in-out; }
-  .social svg:hover {
-    fill: #7B49F2; }
+  fill: #282A33; }
+  @media (min-width: 1025px) {
+    .social svg {
+      -webkit-transition: fill 0.3s ease-in-out;
+      -o-transition: fill 0.3s ease-in-out;
+      transition: fill 0.3s ease-in-out; }
+      .social svg:hover {
+        fill: #7B49F2; } }
 
 .first-screen {
   position: relative;
