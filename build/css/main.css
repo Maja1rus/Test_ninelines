@@ -989,14 +989,13 @@ iframe {
     width: 25px;
     height: 25px; }
 
-.social {
-  fill: #282A33; }
-  .social svg {
-    -webkit-transition: fill 0.3s ease-in-out;
-    -o-transition: fill 0.3s ease-in-out;
-    transition: fill 0.3s ease-in-out; }
-    .social svg:hover {
-      fill: #7B49F2; }
+.social svg {
+  fill: #282A33;
+  -webkit-transition: fill 0.3s ease-in-out;
+  -o-transition: fill 0.3s ease-in-out;
+  transition: fill 0.3s ease-in-out; }
+  .social svg:hover {
+    fill: #7B49F2; }
 
 .first-screen {
   position: relative;
@@ -1543,6 +1542,8 @@ iframe {
     .scroll-to-top.is-arrow .scroll-to-top__wrapper::after {
       background-image: url("../images/arrow.svg");
       background-size: 10px 12px; }
+    .scroll-to-top.is-arrow .scroll-to-top__text {
+      color: transparent; }
   @media (min-width: 1025px) {
     .scroll-to-top {
       font-size: 14px;
