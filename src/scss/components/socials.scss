@@ -11,12 +11,18 @@
 .social {
     
     svg {
+        pointer-events: none;
         fill: $color-black;
+    }
 
-        @include desktop {
+    @include desktop {
+        svg {
             transition: fill 0.3s ease-in-out;
+        }
 
-            &:hover {
+        &:hover {
+
+            svg {
                 fill: $color-accent;
             }
         }
